@@ -6,17 +6,17 @@ const moment = require('moment')
 const PAGE_URL = 'https://www.instagram.com/'
 const JSON_DATA_DIR = path.join(process.cwd(), 'searches')
 const searchParams = {
-  phrase: 'dom',
-  region: 'rzesz',
-  category: 'dom-ogrod',
+  region: 'rzeszow',
+  category: 'nieruchomosci',
+  dealType: 'rent'
   priceMin: 500,
   priceMax: 5000,
   searchInDescription: true,
   offerProvider: 'private',
   descriptionOnly: false
-};
+}
 const categories = ['motoryzacja', 'elektronika', 'rolnictwo', 'sport-hobby', 'dom-ogrod', 'moda', 'dla-dzieci', 'muzyka-edukacja', 'zwierzęta', 'nieruchomości', 'praca', 'usługi-firmy', 'slub-wesele'];
-
+const dealTypes = ['rent', 'purchase']
 class Scraper {
   constructor (url, targetDir) {
     this.url = url
